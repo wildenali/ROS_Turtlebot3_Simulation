@@ -12,5 +12,6 @@ def callback(msg):
 rospy.init_node("read_laser_scan_node")
 sub = rospy.Subscriber('/kobuki/laser/scan', LaserScan, callback)
 
+
 while not rospy.is_shutdown():
     print(distance)

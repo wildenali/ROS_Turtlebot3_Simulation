@@ -7,6 +7,7 @@ def callback(msg):
     print("range[0]  : ", msg.ranges[0])
     print("range[360]: ", msg.ranges[360])
     print("range[719]: ", msg.ranges[719])
+ 
     
 if __name__ == '__main__':
     rospy.init_node("read_laser_scan_node")
