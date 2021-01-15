@@ -13,3 +13,4 @@ if __name__ == '__main__':
     rospy.init_node("read_laser_scan_node")
     sub = rospy.Subscriber('/kobuki/laser/scan', LaserScan, callback)
     rospy.spin()
+    # cek
