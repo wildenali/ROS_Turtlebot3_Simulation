@@ -1,4 +1,4 @@
-# `Create a New ROS Package`
+# Create a New ROS Package
 
 Open a new terminal
 
