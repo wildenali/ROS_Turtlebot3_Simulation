@@ -57,3 +57,30 @@ catkin_install_python(PROGRAMS
    Open a new terminal and run:
 
 - `$ rosrun turtlebot3_wilden 001_ReadLaserScan.py`
+
+8. Try another code and create a file called 002_ReadLaserScan.py
+
+- `$ roscd turtlebot3_wilden/src`
+- `$ touch 002_ReadLaserScan.py`
+
+9. Configuration 002_ReadLaserScan.py File
+
+- Open a 002_ReadLaserScan.py file and write the code
+- `$ chmod +x 002_ReadLaserScan.py` change the permissions
+- Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+```
+catkin_install_python(PROGRAMS
+  src/001_ReadLaserScan.py
+  src/002_ReadLaserScan.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+```
+
+- `$ roscd ~/catkin_ws`
+- `$ catkin_make`
+
+10. Run the Code
+
+- Do no 4, 5, and 6
+- `$ rosrun turtlebot3_wilden 002_ReadLaserScan.py`
