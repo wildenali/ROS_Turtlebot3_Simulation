@@ -17,6 +17,8 @@ Open a new terminal
 
 2. Find the Laser Scanner Lidar Topic
 
+- `$ export TURTLEBOT3_MODEL=burger`
+- `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
 - `$ rostopic list` it will list the active topic and find `scan` topic
 - `$ rostopic info /scan` show the /scan topic information
 - `$ rostopic echo /scan` looping print messages to screen
