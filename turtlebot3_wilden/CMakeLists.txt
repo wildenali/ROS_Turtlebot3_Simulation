@@ -161,6 +161,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   src/001_ReadLaserScan.py
   src/002_ReadLaserScan.py
+  src/003_MoveWheels.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

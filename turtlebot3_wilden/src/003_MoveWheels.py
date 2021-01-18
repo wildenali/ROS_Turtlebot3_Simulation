@@ -15,7 +15,7 @@ if __name__ == '__main__':
     pub.publish(twist)
     rate.sleep()
     while True:
-        twist.linear.x = 0.5
+        twist.linear.x = -0.5
         pub.publish(twist)
         rate.sleep()
 
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         pub.publish(twist)
         rate.sleep()
 
-        twist.linear.x = -0.5
+        twist.linear.x = 0.5
         pub.publish(twist)
         rate.sleep()
 
