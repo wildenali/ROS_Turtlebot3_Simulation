@@ -111,3 +111,22 @@ catkin_install_python(PROGRAMS
 
 - `$ rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}'` -r 10 means rate 10Hz
 - `$ rostopic pub -1 /cmd_vel geometry_msgs/Twist '{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}'` -1 means once move or can use --once
+
+5. Move the turtle with python script
+
+- Open a 003_MoveWheels.py file and write the code
+- `$ chmod +x 003_MoveWheels.py` change the permissions
+- Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+```
+catkin_install_python(PROGRAMS
+  src/001_ReadLaserScan.py
+  src/002_ReadLaserScan.py
+  src/003_MoveWheels.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+```
+
+- `$ roscd ~/catkin_ws`
+- `$ catkin_make`
+- `$ rosrun turtlebot3_wilden 003_MoveWheels.py`
