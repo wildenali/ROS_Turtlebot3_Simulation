@@ -10,7 +10,7 @@ or
 
 - `$ sudo apt-get remove ros-kinetic-turtlebot3-msgs`
 - `$ sudo apt-get remove ros-kinetic-turtlebot3`
-- `$ mkdir -p ~/catkin_ws/src`
+- `$ mkdir -p ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
 - `$ cd ~/catkin_ws/src/`
 - `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
 - `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
@@ -25,8 +25,8 @@ or
 
 # Install Simulation Package
 
-- `git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
-- `cd ~/catkin_ws && catkin_make`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
+- `$ cd ~/catkin_ws && catkin_make`
 
 # Launch Simulation World
 
