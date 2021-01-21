@@ -159,10 +159,10 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  src/001_ReadLaserScan.py
-  src/002_ReadLaserScan.py
-  src/003_MoveWheels.py
-  src/004_ShowOdometryInfo.py
+  src/A_ReadLaserScan/A01_ReadLaserScan.py
+  src/A_ReadLaserScan/A02_ReadLaserScan.py
+  src/B_MoveWheels/B01_MoveWheels.py
+  src/C_ShowOdometryInfo/C01_ShowOdometryInfo.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

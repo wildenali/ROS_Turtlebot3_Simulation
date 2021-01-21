@@ -54,4 +54,16 @@ or
 - `$ export TURTLEBOT3_MODEL=burger`
 - `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
 
-# [My Turtlebot3 Simulation Project](https://github.com/wildenali/ROS_Turlebot3_Simulation/tree/master/turtlebot3_wilden)
+# My Turtlebot3 Simulation Project
+
+Create a New ROS Package
+
+Open a new terminal
+
+- `$ cd ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
+- `$ catkin_create_pkg turtlebot3_wilden std_msgs rospy`
+- `$ cd ~/catkin_ws`
+- `$ catkin_make`
+- `$ . ~/catkin_ws/devel/setup.bash`
+
+Go to [turtlebot3_wilden](https://github.com/wildenali/ROS_Turlebot3_Simulation/tree/master/turtlebot3_wilden)
