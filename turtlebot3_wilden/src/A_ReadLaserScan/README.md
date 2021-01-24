@@ -74,3 +74,53 @@
 
    - Do no 4, and 5
    - `$ rosrun turtlebot3_wilden A02_ReadLaserScan.py`
+
+# `A03_ConvertLaserScanIntoAPointcloud.py`
+
+1. Create and Configure a file called A03_ConvertLaserScanIntoAPointcloud.py
+
+   - `$ roscd turtlebot3_wilden/src/A_ReadLaserScan`
+   - `$ touch A03_ConvertLaserScanIntoAPointcloud.py`
+   - `$ chmod +x A03_ConvertLaserScanIntoAPointcloud.py` change the permissions
+   - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+   ```
+   catkin_install_python(PROGRAMS
+   src/A_ReadLaserScan/A03_ConvertLaserScanIntoAPointcloud.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+   )
+   ```
+
+   - `$ roscd ~/catkin_ws`
+   - `$ catkin_make`
+   - Open a A03_ConvertLaserScanIntoAPointcloud.py file and write the code
+   
+
+2. Find the Laser Scanner Lidar Topic
+
+   - `$ export TURTLEBOT3_MODEL=burger`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
+   - `$ rostopic list` it will list the active topic and find `scan` topic
+   - `$ rostopic info /scan` show the /scan topic information
+   - `$ rostopic echo /scan` looping print messages to screen
+   - `$ rostopic echo /scan -n1` just once print messages to screen
+   - `$ rosmsg show sensor_msgs/LaserScan` show the data type
+
+3. Build and Run the Code
+   - `$ cd ~/catkin_ws && catkin_make`
+   - `$ rosrun turtlebot3_wilden A03_ConvertLaserScanIntoAPointcloud.py`
+
+4. Check the Result
+   - Open a new terminal
+   - `$ cd ~/catkin_ws && catkin_make`
+   - `$ rostopic list` and find /laser_point_cloud
+   - `$ rostopic info /laser_point_cloud`
+   - `$ rostopic echo -n1 /laser_point_cloud` show once message
+   - `$ export TURTLEBOT3_MODEL=burger`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch`
+   - Configure the rviz gui
+      - Click Add button and find PointCloud2 and then click OK
+      - Collapse the PointCloud2
+      - Change the topic for PointCloud2 to be /laser_point_cloud
+      - See the result on the display
+
