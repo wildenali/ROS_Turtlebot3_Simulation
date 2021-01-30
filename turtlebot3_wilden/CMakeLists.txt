@@ -159,8 +159,9 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-    src/A_LaserScanner/A01_ReadLaserScan.py
-    src/A_LaserScanner/A02_ReadLaserScan.py
+    # src/A_LaserScanner/A01_ReadLaserScan.py
+    # src/A_LaserScanner/A02_ReadLaserScan.py
+    src/A_LaserScanner/A03_ConvertLaserScanIntoAPointcloud.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
