@@ -164,7 +164,8 @@ catkin_install_python(PROGRAMS
 #   src/A_ReadLaserScan/A03_ConvertLaserScanIntoAPointcloud.py
 #   src/B_MoveWheels/B01_MoveWheels.py
 #   src/C_ShowOdometryInfo/C01_ShowOdometryInfo.py
-  src/D_MoveWithOdometry/D01_Square.py
+#   src/D_MoveWithOdometry/D01_Square.py
+	src/D_MoveWithOdometry/D02_HeadingOdometry.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
