@@ -43,3 +43,44 @@
    - `$ catkin_make`
    - `$ source devel/setup.bash`
    - `$ rosrun turtlebot3_wilden B01_MoveWheels.py`
+
+## B02_AccelVelocity
+
+Acceleration velocity using array in the twist
+
+1. Create a file called B02_AccelVelocity.py
+
+   - `$ roscd turtlebot3_wilden/src/B_Velocity`
+   - `$ touch B02_AccelVelocity.py`
+
+2. Launch the turtlebot3_world.launch
+   Open a terminal and run:
+
+   - `$ export TURTLEBOT3_MODEL=burger`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_state_1.launch`
+
+3. Find the cmd_vel Topic
+   Open a new terminal and run:
+
+   - `$ rostopic list`
+   - `$ rostopic info /cmd_vel`
+   - `$ rosmsg show geometry_msgs/Twist`
+
+4. Move the turtle with python script
+
+   - `$ roscd turtlebot3_wilden/src/B_Velocity`
+   - `$ chmod +x B02_AccelVelocity.py`
+   - Open a B02_AccelVelocity.py file and write the code
+   - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+   ```
+   catkin_install_python(PROGRAMS
+       src/B_Velocity/B02_AccelVelocity.py
+       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+   )
+   ```
+
+   - `$ roscd ~/catkin_ws`
+   - `$ catkin_make`
+   - `$ source devel/setup.bash`
+   - `$ rosrun turtlebot3_wilden B02_AccelVelocity.py`
