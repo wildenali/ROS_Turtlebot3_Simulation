@@ -1,6 +1,8 @@
 # `Velocity`
 
-## Move the Turtlebot using Velocity Command
+## B01_MoveWheels
+
+Move the Turtlebot using Velocity Command
 
 1. Create a file called B01_MoveWheels.py
 
