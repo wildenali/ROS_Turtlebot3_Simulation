@@ -1,6 +1,8 @@
 # `Laser Scanner Lidar`
 
-## Measured the Distance
+## A01_ReadLaserScan and A02_ReadLaserScan
+
+Measured the Distance
 
 1. Create a file called A01_ReadLaserScan.py
 
@@ -79,7 +81,7 @@
    - Do no 4, and 5
    - `$ rosrun turtlebot3_wilden A02_ReadLaserScan.py`
 
-## Convert Laser Scan into a Pointcloud
+## A03_ConvertLaserScanIntoAPointcloud
 
 1. Create and Configure a file called A03_ConvertLaserScanIntoAPointcloud.py
 
