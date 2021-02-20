@@ -1,6 +1,6 @@
 # `Odometry`
 
-## Show Odometry Info
+## C01_ShowOdometryInfo
 
 1. Create a file called C01_ShowOdometryInfo.py
 
@@ -48,7 +48,7 @@
    - `$ source devel/setup.bash`
    - `$ rosrun turtlebot3_wilden C01_ShowOdometryInfo.py`
 
-## Square Movement
+## C02_SquareMovementBasedOnOdometry
 
 1. Create a file called C02_SquareMovementBasedOnOdometry.py
 
@@ -96,7 +96,7 @@
    - `$ source devel/setup.bash`
    - `$ rosrun turtlebot3_wilden C02_SquareMovementBasedOnOdometry.py`
 
-## Desired Heading using Odometry
+## C03_DesiredHeadingUsingOdometry
 
 1. Create a file called C03_DesiredHeadingUsingOdometry.py
 
