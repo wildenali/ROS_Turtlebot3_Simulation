@@ -168,7 +168,8 @@ catkin_install_python(PROGRAMS
     # src/C_Odometry/C01_ShowOdometryInfo.py
     # src/C_Odometry/C02_SquareMovementBasedOnOdometry.py
     # src/C_Odometry/C03_DesiredHeadingUsingOdometry.py
-    src/D_MazeSolving/D01_ReachCertainPosition.py
+    # src/D_MazeSolving/D01_ReachCertainPosition.py
+    # src/E_IMU/E01_ReadIMU.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
