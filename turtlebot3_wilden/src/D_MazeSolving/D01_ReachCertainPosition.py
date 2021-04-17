@@ -29,8 +29,8 @@ speed = Twist()
 rate = rospy.Rate(5)
 goal = Point()
 
-goal.x = 5
-goal.y = 5
+goal.x = 1
+goal.y = 1
 
 while not rospy.is_shutdown():
     length_x = goal.x - x
