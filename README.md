@@ -2,6 +2,16 @@
 
 # Install Turtlebot3 Packages
 
+- [Install Turtlebot3 on PC](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
+- `$ mkdir -p ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
+- `$ cd ~/catkin_ws/src/`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
+- `$ cd ~/catkin_ws && catkin_make`
+- `$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc`
+
+or
+
 - `$ source /opt/ros/kinetic/setup.bash`
 - `$ sudo apt-get install ros-kinetic-turtlebot3-msgs`
 - `$ sudo apt-get install ros-kinetic-turtlebot3`
@@ -10,6 +20,7 @@ or
 
 - `$ sudo apt-get remove ros-kinetic-turtlebot3-msgs`
 - `$ sudo apt-get remove ros-kinetic-turtlebot3`
+
 - `$ mkdir -p ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
 - `$ cd ~/catkin_ws/src/`
 - `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
@@ -25,6 +36,8 @@ or
 
 # Install Simulation Package
 
+- `$ cd`
+- `$ cd catkin_ws/src/ROS_Turlebot3_Simulation`
 - `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
 - `$ cd ~/catkin_ws && catkin_make`
 
