@@ -31,7 +31,14 @@ def stopTwist():
     speed.linear.x  = 0.0
     speed.angular.z = 0.0
     pub.publish(speed)
-    
+
+def my_shutdown_hook():
+    rospy.loginfo("It's shutdown time!") 
+    rospy.loginfo("STOP the robot !!!") 
+    speed.linear.x = 0
+    speed.angular.z = 0
+    pub.publish(speed)
+
 def run():
     print("Run")
     while not rospy.is_shutdown():
@@ -89,11 +96,12 @@ contoh xy = 0 -1
             |
 -1 -1      0 -1      1 -1
 '''
-goal.x  = 0         # units in meter  0  0 -1  1  1 -1
-goal.y  = -1         # units in meter -1  1  0  0  1  1
+goal.x  = 1         # units in meter  0  0 -1  1  1 -1
+goal.y  = 1         # units in meter -1  1  0  0  1  1
 
 if __name__ == '__main__':
     try:
+        rospy.on_shutdown(my_shutdown_hook)
         run()
     except rospy.ROSInterruptException:
         pass
