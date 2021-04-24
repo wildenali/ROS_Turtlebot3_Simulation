@@ -80,3 +80,7 @@ Open a new terminal
 - `$ . ~/catkin_ws/devel/setup.bash`
 
 Go to [turtlebot3_wilden](https://github.com/wildenali/ROS_Turlebot3_Simulation/tree/master/turtlebot3_wilden)
+
+
+`git config --global user.email "wildenwildenaliali@gmail.com"`
+`git config --global user.name "wildenali"`
