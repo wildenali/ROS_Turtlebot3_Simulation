@@ -36,8 +36,13 @@ contoh xy = 0 -1
 -1 -1      0 -1      1 -1
 '''
 goal  = Point()
-goal.x  = 1         # units in meter  0  0 -1  1  1 -1
-goal.y  = 1         # units in meter -1  1  0  0  1  1
+# goal.x  = -1         # units in meter  0  0 -1  1  1 -1
+# goal.y  = 1         # units in meter -1  1  0  0  1  1
+
+current_goal_x  = -1
+current_goal_y  = 1
+next_goal_x     = 0
+next_goal_y     = 0
 
 def odomCallback(msg):
     global pos_x, pos_y, yaw, current_yaw
@@ -83,6 +88,8 @@ def my_shutdown_hook():
 
 def run():
     print("Run")
+    goal.x = current_goal_x
+    goal.y = current_goal_y
     isHeading = False
     while not rospy.is_shutdown():
         
@@ -115,6 +122,15 @@ def run():
             print("Sampai")
             speed.linear.x  = 0
             speed.angular.z = 0
+
+            if goal.x != next_goal_x: 
+                goal.x = next_goal_x
+            elif goal.x != current_goal_x: 
+                goal.x = current_goal_x
+            if goal.y != next_goal_y: 
+                goal.y = next_goal_y
+            elif goal.y != current_goal_y: 
+                goal.y = current_goal_y
 
         # set max speed linear x
         if speed.linear.x >= 0.3:
