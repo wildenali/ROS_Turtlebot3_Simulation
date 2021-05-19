@@ -36,8 +36,8 @@ contoh xy = 0 -1
 -1 -1      0 -1      1 -1
 '''
 goal  = Point()
-goal.x  = 1         # units in meter  0  0 -1  1  1 -1
-goal.y  = 1         # units in meter -1  1  0  0  1  1
+goal.x  = -1         # units in meter  0  0 -1  1  1 -1
+goal.y  = -1         # units in meter -1  1  0  0  1  1
 
 def odomCallback(msg):
     global pos_x, pos_y, yaw, current_yaw
