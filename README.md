@@ -15,11 +15,14 @@ or
 - `$ source /opt/ros/kinetic/setup.bash`
 - `$ sudo apt-get install ros-kinetic-turtlebot3-msgs`
 - `$ sudo apt-get install ros-kinetic-turtlebot3`
+- `$ sudo apt-get install ros-kinetic-turtlebot3_simulations`
+
 
 or
 
 - `$ sudo apt-get remove ros-kinetic-turtlebot3-msgs`
 - `$ sudo apt-get remove ros-kinetic-turtlebot3`
+- `$ sudo apt-get remove ros-kinetic-turtlebot3_simulations`
 
 - `$ mkdir -p ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
 - `$ cd ~/catkin_ws/src/`
@@ -84,3 +87,42 @@ Go to [turtlebot3_wilden](https://github.com/wildenali/ROS_Turlebot3_Simulation/
 
 `git config --global user.email "wildenwildenaliali@gmail.com"`
 `git config --global user.name "wildenali"`
+
+
+
+# Clone the Poject
+- Note if you using the ubuntu 16.xx uses kinetic, ubuntu 18.xx use molodic
+- Clone the project from https://github.com/wildenali/ROS_Turlebot3_Simulation
+- `$ cd ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
+- `$ cd ~/catkin_ws/src/`
+
+## Install the Turtlebot3
+### Install by sudo
+- `$ source /opt/ros/kinetic/setup.bash`
+- `$ sudo apt-get install ros-kinetic-turtlebot3-msgs`
+- `$ sudo apt-get install ros-kinetic-turtlebot3`
+- `$ sudo apt-get install ros-kinetic-turtlebot3_simulations`
+
+### Clone the repository
+- `$ cd ~/catkin_ws/src/`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
+- `$ catkin_make`
+- `$ . ~/catkin_ws/devel/setup.bash`
+
+
+## Launch the Turtlebot on Gazebo
+
+- `$ export TURTLEBOT3_MODEL=burger`
+- `$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch`
+- `$ roslaunch turtlebot3_gazebo turtlebot3_teleop_key.launch`
+
+- Kalau misalnya keluar seperti ini
+  `ERROR: cannot launch node of type [turtlebot3_teleop/turtlebot3_teleop_key]:can't locate node [turtlebot3_teleop_key] in package [turtlebot3_teleop]`
+  Carafix issue nya, hapus folder turtlebot3 kemudian git clone
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
+- `$ cd ~/catkin_ws && catkin_make`
+- `$ export TURTLEBOT3_MODEL=burger`
+- `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
+
