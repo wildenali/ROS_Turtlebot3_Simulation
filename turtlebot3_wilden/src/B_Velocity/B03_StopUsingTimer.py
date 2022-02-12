@@ -22,15 +22,15 @@ class Timer():
     
     def sub_clock(self, msg):
         self.current_time = msg.clock.secs
-        if self.ref_time = -1:
+        if self.ref_time == -1:
             self.init_timer()
-        print 'Second without cmd_vel cmd: ' + str((self.current_time - self.ref_time))
+        print('Second without cmd_vel cmd: ' + str((self.current_time - self.ref_time)))
         if (self.current_time - self.ref_time) > 15:
             self.stop_robot()
             self.init_timer()
 
-            print 'Ref Time: ' + str(self.ref_time)
-            print 'Current Time: ' + str(self.current_time)
+            print('Ref Time: ' + str(self.ref_time))
+            print('Current Time: ' + str(self.current_time))
 
     def sub_callback(self, msg):
         self.init_timer()
@@ -43,7 +43,7 @@ class Timer():
         """
         while not self.ctrl_c:
             connections = self.cmd_vel_publisher.get_num_connections()
-            if connection > 0:
+            if connections > 0:
                 self.cmd_vel_publisher.publish(cmd)
                 break
             else:
