@@ -173,7 +173,8 @@ catkin_install_python(PROGRAMS
 	  # src/D_MazeSolving/D03_TwoWaypoinAndHeading.py
     # src/E_IMU/E01_ReadIMU.py
     # src/E_IMU/E02_MonitoringPositionAndAcceleration.py
-    src/F_FollowTheGrid/F01_FollowTheGrid_Y_Axis.py
+    # src/F_FollowTheGrid/F01_FollowTheGrid_Y_Axis.py
+    src/F_FollowTheGrid/F02_FollowTheGrid_X_Axis.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
