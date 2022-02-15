@@ -60,6 +60,9 @@
 
    - `$ export TURTLEBOT3_MODEL=burger`
    - `$ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_stage_2.launch`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_stage_3.launch`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_stage_4.launch`
 
 3. Find the /odom Topic
    Open a new terminal and run:
