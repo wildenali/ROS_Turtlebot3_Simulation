@@ -169,10 +169,11 @@ catkin_install_python(PROGRAMS
     # src/C_Odometry/C02_SquareMovementBasedOnOdometry.py
     # src/C_Odometry/C03_DesiredHeadingUsingOdometry.py
     # src/D_MazeSolving/D01_ReachCertainPosition.py
-	# src/D_MazeSolving/D02_OneWaypoinAndHeading.py
-	src/D_MazeSolving/D03_TwoWaypoinAndHeading.py
+	  # src/D_MazeSolving/D02_OneWaypoinAndHeading.py
+	  # src/D_MazeSolving/D03_TwoWaypoinAndHeading.py
     # src/E_IMU/E01_ReadIMU.py
     # src/E_IMU/E02_MonitoringPositionAndAcceleration.py
+    src/F_FollowTheGrid/F01_FollowTheGrid_Y_Axis.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
