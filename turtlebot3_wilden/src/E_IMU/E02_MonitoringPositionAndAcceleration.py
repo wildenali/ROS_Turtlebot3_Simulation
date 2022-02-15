@@ -6,16 +6,16 @@ from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu
 
 def odom_callback(msg):
-    print "pose x = " + str(msg.pose.pose.position.x)
-    print "pose y = " + str(msg.pose.pose.position.y)
-    print "orientation x = " + str(msg.pose.pose.orientation.x)
-    print "orientation y = " + str(msg.pose.pose.orientation.y)
+    print("pose x = " + str(msg.pose.pose.position.x))
+    print("pose y = " + str(msg.pose.pose.position.y))
+    print("orientation x = " + str(msg.pose.pose.orientation.x))
+    print("orientation y = " + str(msg.pose.pose.orientation.y))
 
 def imu_callback(msg):
-    print "vel angular y = " + str(msg.angular_velocity.y)
-    print "vel angular z = " + str(msg.angular_velocity.z)
-    print "accel linear x = " + str(msg.linear_acceleration.x)
-    print "accel linear y = " + str(msg.linear_acceleration.y)
+    print("vel angular y = " + str(msg.angular_velocity.y))
+    print("vel angular z = " + str(msg.angular_velocity.z))
+    print("accel linear x = " + str(msg.linear_acceleration.x))
+    print("accel linear y = " + str(msg.linear_acceleration.y))
     
 rospy.init_node("monitoring_position_and_speed")
 pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
