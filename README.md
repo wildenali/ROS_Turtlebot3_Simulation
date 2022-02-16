@@ -10,9 +10,9 @@
 
 ##### 2. Clone the Turtlebot3 repository
 - `$ cd ~/catkin_ws/src/`
-- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
-- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
-- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
+- `$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
+- `$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
+- `$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
 - `$ catkin_make`
 - `$ . ~/catkin_ws/devel/setup.bash`
 
