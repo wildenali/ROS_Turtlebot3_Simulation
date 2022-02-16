@@ -1,5 +1,30 @@
 # ROS_Turtlebot
 
+# Turtlebot3 on Neotic Distro
+##### 1. Clone the project
+- Clone the project from https://github.com/wildenali/ROS_Turtlebot3_Simulation
+- `$ cd ~/catkin_ws/src/`
+- `$ git clone https://github.com/wildenali/ROS_Turtlebot3_Simulation.git`
+- `$ cd ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
+- `$ cd ~/catkin_ws && catkin_make`
+
+##### 2. Clone the Turtlebot3 repository
+- `$ cd ~/catkin_ws/src/`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
+- `$ git clone -b kinetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
+- `$ catkin_make`
+- `$ . ~/catkin_ws/devel/setup.bash`
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 # Install Turtlebot3 Packages
 
 - [Install Turtlebot3 on PC](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
@@ -92,7 +117,7 @@ Go to [turtlebot3_wilden](https://github.com/wildenali/ROS_Turlebot3_Simulation/
 
 # Clone the Poject
 - Note if you using the ubuntu 16.xx uses kinetic, ubuntu 18.xx use molodic
-- Clone the project from https://github.com/wildenali/ROS_Turlebot3_Simulation
+- Clone the project from https://github.com/wildenali/ROS_Turtlebot3_Simulation
 - `$ cd ~/catkin_ws/src/ROS_Turtlebot3_Simulation`
 - `$ cd ~/catkin_ws/src/`
 
