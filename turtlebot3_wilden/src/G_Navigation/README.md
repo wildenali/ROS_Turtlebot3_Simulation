@@ -37,21 +37,24 @@
    - note: install `$ sudo apt install ros-noetic-move-base` if ERROR: cannot launch node of type [move_base/move_base]: move_base
    - if Error Failed to create the dwa_local_planner/DWAPlannerROS then install`$ sudo apt-get install ros-indigo-dwa-local-planner`
 
-4. Show the /odom message using python script
+
+
+4. Create a Code and Configuration
    Open a new terminal and run:
 
-   - Open a G01_ReadLocalPlanner.py file and write the code
+   - Open a G01_MoveBaseGoal.py file and write the code
    - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
 
    ```
    catkin_install_python(PROGRAMS
-       src/G_PathPlanning/G01_ReadLocalPlanner.py
+       src/G_Navigation/G01_MoveBaseGoal.py
        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
    )
    ```
 
-   - Open a G01_ReadLocalPlanner.py file and write the code
+   - Open a G01_MoveBaseGoal.py file and write the code
    - `$ cd ~/catkin_ws`
    - `$ catkin_make`
    - `$ source devel/setup.bash`
-   - `$ rosrun turtlebot3_wilden G01_ReadLocalPlanner.py`
+   - `$ export TURTLEBOT3_MODEL=burger`
+   - `$ rosrun turtlebot3_wilden G01_MoveBaseGoal.py`
