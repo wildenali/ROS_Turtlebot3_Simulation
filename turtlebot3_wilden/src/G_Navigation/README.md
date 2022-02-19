@@ -22,7 +22,7 @@
    - `$ rosrun gmapping slam_gmapping scan:=base_scan`
 
 4. Save the Map
-    - `$ rosrun map_server map_saver -f ~/map_warehouse`
+    - `$ rosrun map_server map_saver -f ~/map`
 
 5. Run Navigation Node (run the map)
    - `$ export TURTLEBOT3_MODEL=burger`
