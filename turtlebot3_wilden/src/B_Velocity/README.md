@@ -137,5 +137,4 @@ The topics used are:
    - `$ roscd ~/catkin_ws`
    - `$ catkin_make`
    - `$ source devel/setup.bash`
-   - `$ rosrun turtlebot3_TELEOOOOOOPPPPP` and moveing the robot forward or any direction
    - `$ rosrun turtlebot3_wilden B03_StopUsingTimer.py`

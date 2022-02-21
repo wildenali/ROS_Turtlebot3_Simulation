@@ -1,6 +1,6 @@
 # ROS_Turtlebot
 
-# Turtlebot3 on Neotic Distro
+# Turtlebot3 on Melodic Distro
 ##### 1. Clone the project
 - Clone the project from https://github.com/wildenali/ROS_Turtlebot3_Simulation
 - `$ cd ~/catkin_ws/src/`
@@ -10,9 +10,9 @@
 
 ##### 2. Clone the Turtlebot3 repository
 - `$ cd ~/catkin_ws/src/`
-- `$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
-- `$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
-- `$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
+- `$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git`
+- `$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git`
+- `$ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git`
 - `$ cd ~/catkin_ws`
 - `$ catkin_make`
 - `$ . ~/catkin_ws/devel/setup.bash`
