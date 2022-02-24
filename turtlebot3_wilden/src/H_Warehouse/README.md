@@ -1699,7 +1699,7 @@
 
 ## Create the Map and Navigation Stack
 
-1. Launch the turtlebot3_empty_world.launch
+1. Launch the turtlebot3_empty_world.launch (edited)
    Open a terminal and run:
 
    - `$ export TURTLEBOT3_MODEL=waffle`
