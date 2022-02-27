@@ -1732,3 +1732,714 @@
 6. Move the turtlebot3 using 2D Pose Estimation until same as in Gazebo
 7. Desire the point turtlebot3 going to using 2D Nav Goal button
 
+
+## Get the waypoint
+
+1. Launch the turtlebot3_empty_world.launch (edited)
+   Open a terminal and run:
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
+
+2. Open a new tab, run, and try to move the robot
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
+
+3. Run Navigation Node (run the map)
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map_warehouse.yaml`
+
+4. Find the /odom Topic
+   Open a new terminal and run:
+   - `$ rostopic list`
+   - `$ rostopic info /odom`
+   - `$ rosmsg show nav_msgs/Odometry`
+   - `$ rostopic echo -n1 /odom`
+
+A1:
+pose: 
+  pose: 
+    position: 
+      x: -1.9
+      y: 0.4
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.999715016313
+      w: -0.0238192447667
+
+A2:
+pose: 
+  pose: 
+    position: 
+      x: -1.9
+      y: 0.0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.999971527306
+      w: -0.00737679842661
+
+A3:
+pose: 
+  pose: 
+    position: 
+      x: -1.9
+      y: -0.4
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.99967129547
+      w: -0.0255885037429
+
+B1:
+pose: 
+  pose: 
+    position: 
+      x: -0.9
+      y: -1.9
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.712404379097
+      w: 0.701767389226
+
+B2:
+pose: 
+  pose: 
+    position: 
+      x: -0.6
+      y: -1.9
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.73314243972
+      w: -0.680073253102
+
+B3:
+pose: 
+  pose: 
+    position: 
+      x: -0.2
+      y: -1.9
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.678606138054
+      w: 0.734500630411
+
+B4:
+pose: 
+  pose: 
+    position: 
+      x: 0.2
+      y: -1.9
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.690492640808
+      w: -0.723337668471
+
+B5:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: -1.9
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.709203098062
+      w: 0.70500243582
+
+B6:
+pose: 
+  pose: 
+    position: 
+      x: 0.9
+      y: -1.9
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.699311081634
+      w: 0.714815695103
+
+C1:
+pose: 
+  pose: 
+    position: 
+      x: -0.9
+      y: -1.5
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.704594837174
+      w: 0.709608048616
+
+C2:
+pose: 
+  pose: 
+    position: 
+      x: -0.6
+      y: -1.5
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.704594837174
+      w: 0.709608048616
+
+C3:
+pose: 
+  pose: 
+    position: 
+      x: -0.2
+      y: -1.5
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.704594837174
+      w: 0.709608048616
+
+C4:
+pose: 
+  pose: 
+    position: 
+      x: 0.2
+      y: -1.5
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.704594837174
+      w: 0.709608048616
+
+C5:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: -1.5
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.709497026881
+      w: 0.704706629111
+
+D1:
+pose: 
+  pose: 
+    position: 
+      x: -0.9
+      y: -0.1
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.708106699157
+      w: -0.706103651688
+
+D2:
+pose: 
+  pose: 
+    position: 
+      x: -0.6
+      y: -0.1
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.708106699157
+      w: -0.706103651688
+
+D3:
+pose: 
+  pose: 
+    position: 
+      x: -0.2
+      y: -0.1
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.708106699157
+      w: -0.706103651688
+
+D4:
+pose: 
+  pose: 
+    position: 
+      x: 0.2
+      y: -0.1
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.708106699157
+      w: -0.706103651688
+
+D5:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: -0.1
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.708106699157
+      w: -0.706103651688
+
+E1:
+pose: 
+  pose: 
+    position: 
+      x: -1.0
+      y: 0.28
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+E2:
+pose: 
+  pose: 
+    position: 
+      x: -0.6
+      y: -0.28
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+E3:
+pose: 
+  pose: 
+    position: 
+      x: -0.2
+      y: 0.28
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+E4:
+pose: 
+  pose: 
+    position: 
+      x: 0.2
+      y: 0.28
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+E5:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: 0.28
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+F1:
+pose: 
+  pose: 
+    position: 
+      x: -1.0
+      y: 1.68
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.702925341896
+      w: 0.711261862277
+
+F2:
+pose: 
+  pose: 
+    position: 
+      x: -0.6
+      y: 1.68
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.702925341896
+      w: 0.711261862277
+
+F3:
+pose: 
+  pose: 
+    position: 
+      x: -0.2
+      y: 1.68
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.702925341896
+      w: 0.711261862277
+
+F4:
+pose: 
+  pose: 
+    position: 
+      x: 0.2
+      y: 1.68
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.702925341896
+      w: 0.711261862277
+
+F5:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: 1.68
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: -0.702925341896
+      w: 0.711261862277
+
+G1:
+pose: 
+  pose: 
+    position: 
+      x: -1.0
+      y: 1.88
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+G2:
+pose: 
+  pose: 
+    position: 
+      x: -0.6
+      y: 1.88
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+G3:
+pose: 
+  pose: 
+    position: 
+      x: -0.2
+      y: 1.88
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+G4:
+pose: 
+  pose: 
+    position: 
+      x: 0.2
+      y: 1.88
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+G5:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: 1.88
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+G6:
+pose: 
+  pose: 
+    position: 
+      x: 0.6
+      y: 1.88
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.702925341896
+      w: 0.711261862277
+
+H1:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: 1.41
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H2:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: 1.0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H3:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: 0.6
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H4:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: 0.20
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H5:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: -0.20
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H6:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: -0.6
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H7:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: -1.0
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+H8:
+pose: 
+  pose: 
+    position: 
+      x: 1.54
+      y: -1.41
+      z: 0.0
+    orientation: 
+      x: 0.0
+      y: 0.0
+      z: 0.0115347134045
+      w: 0.999932209396
+
+
+
+L1:
+  x: -1.7
+  y: 1.2
+
+L2:
+  x: -1.7
+  y: 0.8
+
+L3:
+  x: -1.7
+  y: 0.4
+
+L4:
+  x: -1.7
+  y: 0.00
+
+L5:
+  x: -1.7
+  y: -0.4
+
+L6:
+  x: -1.7
+  y: -0.8
+
+L7:
+  x: -1.7
+  y: -1.2
+
+L8:
+  x: -1.0
+  y: -1.7
+
+L9:
+  x: -0.6
+  y: -1.7
+
+L10:
+  x: -0.2
+  y: -1.7
+
+L11:
+  x: 0.2
+  y: -1.7
+
+L12:
+  x: 0.6
+  y: -1.7
+
+L13:
+  x: 1.0
+  y: -1.7
+
+L14:
+  x: 1.54
+  y: -1.41
+
+L15:
+  x: 1.54
+  y: -1.0
+
+L16:
+  x: 1.54
+  y: -0.6
+
+L17:
+  x: 1.54
+  y: -0.2
+
+L18:
+  x: 1.54
+  y: 0.0
+
+L19:
+  x: 1.54
+  y: 0.6
+
+L20:
+  x: 1.54
+  y: 1.0
+
+L21:
+  x: 1.54
+  y: 1.41
+
+L22:
+  x: 1.0
+  y: -1.78
+
+L23:
+  x: 0.6
+  y: -1.78
+
+L24:
+  x: 0.2
+  y: -1.78
+
+L25:
+  x: -0.2
+  y: -1.78
+
+L26:
+  x: -0.6
+  y: -1.78
+
+L27:
+  x: -1.0
+  y: -1.78
+
+L28:
+  x: -0.9
+  y: 0.00
+
+L29:
+  x: -0.6
+  y: 0.00
+
+L30:
+  x: -0.2
+  y: 0.00
+
+L31:
+  x: 0.2
+  y: 0.00
+
+L32:
+  x: 0.6
+  y: 0.00
