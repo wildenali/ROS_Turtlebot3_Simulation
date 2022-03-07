@@ -12,4 +12,4 @@
 
 6. [FollowTheGrid](https://github.com/wildenali/ROS_Turlebot3_Simulation/tree/master/turtlebot3_wilden/src/F_FollowTheGrid)
 
-7. [Warehouse](https://github.com/wildenali/ROS_Turlebot3_Simulation/tree/master/turtlebot3_wilden/src/H_Warehouse)
+7. [Turtlebot3 Warehouse](https://github.com/wildenali/ROS_Turlebot3_Simulation/tree/master/turtlebot3_wilden/src/H_Warehouse)
