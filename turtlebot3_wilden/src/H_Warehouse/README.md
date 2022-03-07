@@ -1765,8 +1765,8 @@ pose:
     orientation: 
       x: 0.0
       y: 0.0
-      z: 0.999715016313
-      w: -0.0238192447667
+      z: 0.999933589754
+      w: -0.011414187123
 
 A2:
 pose: 
@@ -1778,8 +1778,8 @@ pose:
     orientation: 
       x: 0.0
       y: 0.0
-      z: 0.999971527306
-      w: -0.00737679842661
+      z: 0.999933589754
+      w: -0.011414187123
 
 A3:
 pose: 
@@ -1791,8 +1791,8 @@ pose:
     orientation: 
       x: 0.0
       y: 0.0
-      z: 0.99967129547
-      w: -0.0255885037429
+      z: 0.999933589754
+      w: -0.011414187123
 
 B1:
 pose: 
@@ -2443,3 +2443,69 @@ L31:
 L32:
   x: 0.6
   y: 0.00
+
+
+## H01_WaypointWithoutMoveBase
+
+
+1. Create a file called H01_WaypointWithoutMoveBase.py
+
+   - `$ touch H01_WaypointWithoutMoveBase.py`
+   - `$ chmod +x H01_WaypointWithoutMoveBase.py` change the permissions
+
+2. Launch the turtlebot3_empty_world.launch
+   Open a terminal and run:
+
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch` 
+
+3. Run Navigation Node (run the map)
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map_warehouse.yaml`
+
+4. Create a Code and Configuration
+   Open a new terminal and run:
+
+   - Open a H01_WaypointWithoutMoveBase.py file and write the code
+   - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+   ```
+   catkin_install_python(PROGRAMS
+       src/G_Navigation/H01_WaypointWithoutMoveBase.py
+       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+   )
+   ```
+
+   - Open a H01_WaypointWithoutMoveBase.py file and write the code
+   - `$ cd ~/catkin_ws`
+   - `$ catkin_make`
+   - `$ source devel/setup.bash`
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ rosrun turtlebot3_wilden H01_WaypointWithoutMoveBase.py`
+
+
+
+
+1. Create file H01_WaypointWithoutMoveBase.py
+2. Change the pose position and orientation value
+
+1. Launch the turtlebot3_empty_world.launch (edited)
+   Open a terminal and run:
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
+
+2. Open a new tab, run, and try to move the robot
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
+
+3. Run Navigation Node (run the map)
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map_warehouse.yaml`
+
+4. Find the /odom Topic
+   Open a new terminal and run:
+   - `$ rostopic list`
+   - `$ rostopic info /odom`
+   - `$ rosmsg show nav_msgs/Odometry`
+   - `$ rostopic echo -n1 /odom`
+

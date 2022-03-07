@@ -176,7 +176,8 @@ catkin_install_python(PROGRAMS
     # src/F_FollowTheGrid/F01_FollowTheGrid_Y_Axis.py
     # src/F_FollowTheGrid/F02_FollowTheGrid_X_Axis.py
     # src/G_Navigation/G01_MoveBaseGoal.py
-    src/G_Navigation/G02_SequentialGoal.py
+    # src/G_Navigation/G02_SequentialGoal.py
+    src/H_Warehouse/H01_WaypointWithoutMoveBase.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
