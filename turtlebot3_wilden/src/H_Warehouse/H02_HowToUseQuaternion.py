@@ -7,7 +7,7 @@ import numpy
 from geometry_msgs.msg import Pose, Point, Quaternion
 from tf.transformations import quaternion_from_euler
 
-class MoveBaseSeq():
+class Run():
 
     def __init__(self):
 
@@ -46,6 +46,6 @@ class MoveBaseSeq():
         
 if __name__ == '__main__':
     try:
-        MoveBaseSeq()
+        Run()
     except rospy.ROSInterruptException:
         rospy.loginfo("Navigation finished.")
