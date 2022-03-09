@@ -14,7 +14,6 @@ class Run():
         rospy.init_node('move_base_sequence')
         
         self.pose_seq = list()
-        self.goal_cnt = 0
 
         print("")
         print("Ini Menentukan POSE Position")
@@ -41,8 +40,8 @@ class Run():
 
         print("")
         print("Ini Menentukan POSE POSE Position Orientation")
-        ini_pose = Pose(iniPoint, hasil_q)
-        print(ini_pose)
+        self.pose_seq = Pose(iniPoint, hasil_q)
+        print(self.pose_seq)
         
 if __name__ == '__main__':
     try:
