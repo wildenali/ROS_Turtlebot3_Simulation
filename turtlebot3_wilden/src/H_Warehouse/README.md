@@ -2447,9 +2447,9 @@ L32:
 
 ## H01_WaypointWithoutMoveBase
 
-
 1. Create a file called H01_WaypointWithoutMoveBase.py
 
+   - `$ roscd turtlebot3_wilden/src/H_Warehouse`
    - `$ touch H01_WaypointWithoutMoveBase.py`
    - `$ chmod +x H01_WaypointWithoutMoveBase.py` change the permissions
 
@@ -2471,7 +2471,7 @@ L32:
 
    ```
    catkin_install_python(PROGRAMS
-       src/G_Navigation/H01_WaypointWithoutMoveBase.py
+       src/H_Warehouse/H01_WaypointWithoutMoveBase.py
        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
    )
    ```
@@ -2483,29 +2483,89 @@ L32:
    - `$ export TURTLEBOT3_MODEL=waffle`
    - `$ rosrun turtlebot3_wilden H01_WaypointWithoutMoveBase.py`
 
+## H02_HowToUseQuaternion
 
+This tutorial about how to use quaternion to desired POSE position and orientation from data
 
+1. Create a file called H02_HowToUseQuaternion.py
 
-1. Create file H01_WaypointWithoutMoveBase.py
-2. Change the pose position and orientation value
+   - `$ roscd turtlebot3_wilden/src/H_Warehouse`
+   - `$ touch H02_HowToUseQuaternion.py`
+   - `$ chmod +x H02_HowToUseQuaternion.py` change the permissions
 
-1. Launch the turtlebot3_empty_world.launch (edited)
+2. Launch the turtlebot3_empty_world.launch
    Open a terminal and run:
-   - `$ export TURTLEBOT3_MODEL=waffle`
-   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
 
-2. Open a new tab, run, and try to move the robot
+   - `$ cd ~/catkin_ws`
+   - `$ source devel/setup.bash`
    - `$ export TURTLEBOT3_MODEL=waffle`
-   - `$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch` 
 
 3. Run Navigation Node (run the map)
+   - `$ cd ~/catkin_ws`
+   - `$ source devel/setup.bash`
    - `$ export TURTLEBOT3_MODEL=waffle`
    - `$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map_warehouse.yaml`
 
-4. Find the /odom Topic
+4. Create a Code and Configuration
    Open a new terminal and run:
-   - `$ rostopic list`
-   - `$ rostopic info /odom`
-   - `$ rosmsg show nav_msgs/Odometry`
-   - `$ rostopic echo -n1 /odom`
 
+   - Open a H02_HowToUseQuaternion.py file and write the code
+   - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+   ```
+   catkin_install_python(PROGRAMS
+       src/H_Warehouse/H02_HowToUseQuaternion.py
+       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+   )
+   ```
+
+   - Open a H02_HowToUseQuaternion.py file and write the code
+   - `$ cd ~/catkin_ws`
+   - `$ catkin_make`
+   - `$ source devel/setup.bash`
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ rosrun turtlebot3_wilden H02_HowToUseQuaternion.py`
+
+
+## H02_WaypointWithoutMoveBaseUseList
+
+1. Create a file called H02_WaypointWithoutMoveBaseUseList.py
+
+   - `$ roscd turtlebot3_wilden/src/H_Warehouse`
+   - `$ touch H02_WaypointWithoutMoveBaseUseList.py`
+   - `$ chmod +x H02_WaypointWithoutMoveBaseUseList.py` change the permissions
+
+2. Launch the turtlebot3_empty_world.launch
+   Open a terminal and run:
+
+   - `$ cd ~/catkin_ws`
+   - `$ source devel/setup.bash`
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_gazebo turtlebot3_world.launch` 
+
+3. Run Navigation Node (run the map)
+   - `$ cd ~/catkin_ws`
+   - `$ source devel/setup.bash`
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map_warehouse.yaml`
+
+4. Create a Code and Configuration
+   Open a new terminal and run:
+
+   - Open a H02_WaypointWithoutMoveBaseUseList.py file and write the code
+   - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
+
+   ```
+   catkin_install_python(PROGRAMS
+       src/H_Warehouse/H02_WaypointWithoutMoveBaseUseList.py
+       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+   )
+   ```
+
+   - Open a H02_WaypointWithoutMoveBaseUseList.py file and write the code
+   - `$ cd ~/catkin_ws`
+   - `$ catkin_make`
+   - `$ source devel/setup.bash`
+   - `$ export TURTLEBOT3_MODEL=waffle`
+   - `$ rosrun turtlebot3_wilden H02_WaypointWithoutMoveBaseUseList.py`
