@@ -18,13 +18,16 @@ class Run():
         self.rate  = rospy.Rate(50)
         self.pub_odom = rospy.Subscriber("/odom", Odometry, self.odomCallback)
         self.pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
+        self.twist = Twist()
 
         self.current_pose_position = list()
         self.current_pose_orientation = list()
         self.target_pose = list()
 
-        point = [0, 0, 0]
+        point = [-1, 0, 0]
         yaw = [90]
+
+        self.kP_Angular = 0.01
 
         print("")
         print("Ini Menentukan POSE Position")
@@ -60,6 +63,27 @@ class Run():
             # print(self.errorDistance())
             # print(self.errorAngle())
             print("errorDistance: " + str(self.errorDistance()) + ", errorAngle: " + str(self.errorAngle()))
+            # print(type(self.errorAngle()))
+
+            # Check the odom is Ready or not
+            if not self.current_pose_position or not self.current_pose_orientation:     # check if the list is empty
+                rospy.loginfo("Odometry not Ready")
+            else:
+                if self.errorAngle() > -10 and self.errorAngle() < 10:      # if the robot is already facing the target position
+                    # rospy.loginfo("Heading to Target until errorAngle > -10 and errorAngle < 10")
+                    rospy.loginfo("Good Heading")
+                    self.twist.linear.x = 0
+                    self.twist.angular.z = 0
+                    self.pub_cmd_vel.publish(self.twist)
+                else:
+                    rospy.loginfo("Correction the Heading")
+                    self.twist.linear.x = 0
+                    self.twist.angular.z = self.kP_Angular * self.errorAngle()
+                    rospy.loginfo(self.twist)
+                    self.pub_cmd_vel.publish(self.twist)
+
+
+
             self.rate.sleep()
         # rospy.spin()
     
@@ -80,7 +104,7 @@ class Run():
     def errorDistance(self):
         # print("errorDistance(self)")
         if not self.current_pose_position or not self.current_pose_orientation:     # check if the list is empty
-            # print("odom not ready")
+            print("odom not ready")
             return None
         else:
             length_x = self.target_pose.position.x - self.current_pose_position.x
@@ -92,7 +116,7 @@ class Run():
     def errorAngle(self):
         # print("errorAngle(self)")
         if not self.current_pose_position or not self.current_pose_orientation:     # check if the list is empty
-            # print("odom not ready")
+            print("odom not ready")
             return None
         else:
             length_x = self.target_pose.position.x - self.current_pose_position.x
@@ -111,9 +135,17 @@ class Run():
                 error_yaw = 360 + error_yaw
             return error_yaw
 
+
         
 if __name__ == '__main__':
     try:
         Run()
     except rospy.ROSInterruptException:
+        rospy.loginfo("rospy.ROSInterruptException")
+        pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
+        twist = Twist()
+        twist.linear.x = 0
+        twist.angular.z = 0
+        pub_cmd_vel.publish(twist)
+        rospy.loginfo(twist)
         rospy.loginfo("Navigation finished.")
