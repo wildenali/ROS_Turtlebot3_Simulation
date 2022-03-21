@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from distutils.log import error
 import rospy
 import math
 import numpy
@@ -28,6 +29,7 @@ class Run():
         yaw = [90]
 
         self.kP_Angular = 0.01
+        self.kP_Linear = 0.2
 
         print("")
         print("Ini Menentukan POSE Position")
@@ -71,10 +73,22 @@ class Run():
             else:
                 if self.errorAngle() > -10 and self.errorAngle() < 10:      # if the robot is already facing the target position
                     # rospy.loginfo("Heading to Target until errorAngle > -10 and errorAngle < 10")
-                    rospy.loginfo("Good Heading")
-                    self.twist.linear.x = 0
-                    self.twist.angular.z = 0
-                    self.pub_cmd_vel.publish(self.twist)
+                    # rospy.loginfo("Good Heading")
+                    # self.twist.linear.x = 0
+                    # self.twist.angular.z = 0
+                    # self.pub_cmd_vel.publish(self.twist)
+
+                    if self.errorDistance() < 0.05: # unit in meter, if the robot close with the target position
+                        rospy.loginfo("Arrived")
+                        self.twist.linear.x = 0
+                        self.twist.angular.z = 0
+                        self.pub_cmd_vel.publish(self.twist)
+                    else:
+                        rospy.loginfo("Good Heading")
+                        self.twist.linear.x = self.kP_Linear * self.errorDistance()
+                        self.twist.angular.z = self.kP_Angular * self.errorAngle()
+                        self.pub_cmd_vel.publish(self.twist)
+
                 else:
                     rospy.loginfo("Correction the Heading")
                     self.twist.linear.x = 0
