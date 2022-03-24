@@ -370,6 +370,264 @@ pose:
       z: 0.706771021148
       w: -0.707440592144
 
+B1:
+pose: 
+  pose: 
+    position: 
+      x: -2.0
+      y: -0.5
+      z: 0.0
+
+B2:
+pose: 
+  pose: 
+    position: 
+      x: -1.5
+      y: -1.6
+      z: 0.0
+
+B3:
+pose: 
+  pose: 
+    position: 
+      x: -0.5
+      y: -2.1
+      z: 0.0
+
+B4:
+pose: 
+  pose: 
+    position: 
+      x: 0.5
+      y: -2.1
+      z: 0.0
+
+B5:
+pose: 
+  pose: 
+    position: 
+      x: 1.5
+      y: -1.6
+      z: 0.0
+
+B6:
+pose: 
+  pose: 
+    position: 
+      x: 2.0
+      y: -0.5
+      z: 0.0
+
+B7:
+pose: 
+  pose: 
+    position: 
+      x: 2.0
+      y: 0.5
+      z: 0.0
+
+B8:
+pose: 
+  pose: 
+    position: 
+      x: 1.5
+      y: 1.6
+      z: 0.0
+
+B9:
+pose: 
+  pose: 
+    position: 
+      x: 0.5
+      y: 2.1
+      z: 0.0
+
+B10:
+pose: 
+  pose: 
+    position: 
+      x: -0.5
+      y: 2.1
+      z: 0.0
+
+B11:
+pose: 
+  pose: 
+    position: 
+      x: -1.5
+      y: 1.6
+      z: 0.0
+
+B12:
+pose: 
+  pose: 
+    position: 
+      x: -2.0
+      y: 0.5
+      z: 0.0
+
+B13:
+pose: 
+  pose: 
+    position: 
+      x: -1.5
+      y: 0.5
+      z: 0.0
+
+B14:
+pose: 
+  pose: 
+    position: 
+      x: -1.5
+      y: -0.5
+      z: 0.0
+
+B15:
+pose: 
+  pose: 
+    position: 
+      x: -0.7
+      y: -1.6
+      z: 0.0
+
+B16:
+pose: 
+  pose: 
+    position: 
+      x: -0.35
+      y: -1.6
+      z: 0.0
+
+B17:
+pose: 
+  pose: 
+    position: 
+      x: 0.5
+      y: -1.6
+      z: 0.0
+
+B18:
+pose: 
+  pose: 
+    position: 
+      x: 0.7
+      y: -1.6
+      z: 0.0
+
+B19:
+pose: 
+  pose: 
+    position: 
+      x: 1.5
+      y: -0.5
+      z: 0.0
+
+B20:
+pose: 
+  pose: 
+    position: 
+      x: 1.5
+      y: 0.5
+      z: 0.0
+
+B21:
+pose: 
+  pose: 
+    position: 
+      x: 0.7
+      y: 1.6
+      z: 0.0
+
+B22:
+pose: 
+  pose: 
+    position: 
+      x: 0.4
+      y: 1.6
+      z: 0.0
+
+B23:
+pose: 
+  pose: 
+    position: 
+      x: -0.35
+      y: 1.6
+      z: 0.0
+
+B24:
+pose: 
+  pose: 
+    position: 
+      x: -0.7
+      y: 1.6
+      z: 0.0
+
+B25:
+pose: 
+  pose: 
+    position: 
+      x: -0.7
+      y: 0.5
+      z: 0.0
+
+B26:
+pose: 
+  pose: 
+    position: 
+      x: -0.7
+      y: -0.5
+      z: 0.0
+
+B27:
+pose: 
+  pose: 
+    position: 
+      x: -0.35
+      y: -0.5
+      z: 0.0
+
+B28:
+pose: 
+  pose: 
+    position: 
+      x: 0.4
+      y: -0.5
+      z: 0.0
+
+B29:
+pose: 
+  pose: 
+    position: 
+      x: 0.7
+      y: -0.5
+      z: 0.0
+
+B30:
+pose: 
+  pose: 
+    position: 
+      x: 0.7
+      y: 0.5
+      z: 0.0
+    
+B31:
+pose: 
+  pose: 
+    position: 
+      x: 0.4
+      y: 0.5
+      z: 0.0
+    
+B32:
+pose: 
+  pose: 
+    position: 
+      x: -0.35
+      y: 0.5
+      z: 0.0
+    
+
+    
 
 
 ## H01_WaypointWithoutMoveBase

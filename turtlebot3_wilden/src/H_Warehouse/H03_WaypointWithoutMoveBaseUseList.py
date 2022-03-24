@@ -25,7 +25,39 @@ class Run():
         self.current_pose_orientation = list()
         self.target_pose = list()
 
-        point = [-1, 0, 0]
+        # point = [-2.0, -0.5, 0] # B1
+        # point = [-1.5, -1.6, 0] # B2
+        # point = [-0.5, -2.1, 0] # B3
+        # point = [0.5, -2.1, 0] # B4
+        # point = [1.5, -1.6, 0] # B5
+        # point = [2.0, -0.5, 0] # B6
+        # point = [2.0, 0.5, 0] # B7
+        # point = [1.5, 1.6, 0] # B8
+        # point = [0.5, 2.1, 0] # B9
+        # point = [-0.5, 2.1, 0] # B10
+        # point = [-1.5, 1.6, 0] # B11
+        # point = [-2.0, 0.5, 0] # B12
+        # point = [-1.5, 0.5, 0] # B13
+        # point = [-1.5, -0.5, 0] # B14
+        # point = [-0.7, -1.6, 0] # B15
+        # point = [-0.35, -1.6, 0] # B16
+        # point = [0.5, -1.6, 0] # B17
+        # point = [0.7, -1.6, 0] # B18
+        # point = [1.5, -0.5, 0] # B19
+        # point = [1.5, 0.5, 0] # B20
+        # point = [0.7, 1.6, 0] # B21
+        # point = [0.4, 1.6, 0] # B22
+        # point = [-0.35, 1.6, 0] # B23
+        # point = [-0.7, 1.6, 0] # B24
+        # point = [-0.7, 0.5, 0] # B25
+        # point = [-0.7, -0.5, 0] # B26
+        # point = [-0.35, -0.5, 0] # B27
+        # point = [0.4, -0.5, 0] # B28
+        # point = [0.7, -0.5, 0] # B29
+        # point = [0.7, 0.5, 0] # B30
+        # point = [0.4, 0.5, 0] # B31
+        point = [-0.35, 0.5, 0] # B31
+
         yaw = [90]
 
         self.kP_Angular = 0.01
