@@ -756,12 +756,12 @@ This tutorial about how to use quaternion to desired POSE position and orientati
    - `$ rosrun turtlebot3_wilden H03_WaypointWithoutMoveBaseUseList.py`
 
 
-## H04_MultiWaypointWithoutMoveBaseUseList
+## H04_SequentialWaypointWithoutMoveBase
 
-1. Create a file called H04_MultiWaypointWithoutMoveBaseUseList.py
+1. Create a file called H04_SequentialWaypointWithoutMoveBase.py
    - `$ cd catkin_ws/src/ROS_Turtlebot3_Simulation/turtlebot3_wilden/src/H_Warehouse`
-   - `$ touch H04_MultiWaypointWithoutMoveBaseUseList.py`
-   - `$ chmod +x H04_MultiWaypointWithoutMoveBaseUseList.py` change the permissions
+   - `$ touch H04_SequentialWaypointWithoutMoveBase.py`
+   - `$ chmod +x H04_SequentialWaypointWithoutMoveBase.py` change the permissions
 
 2. Launch the turtlebot3_empty_world.launch
    Open a terminal and run:
@@ -780,19 +780,19 @@ This tutorial about how to use quaternion to desired POSE position and orientati
 4. Create a Code and Configuration
    Open a new terminal and run:
 
-   - Open a H04_MultiWaypointWithoutMoveBaseUseList.py file and write the code
+   - Open a H04_SequentialWaypointWithoutMoveBase.py file and write the code
    - Open a CMakeLists.txt inside turtlebot3_wilden package and edit
 
    ```
    catkin_install_python(PROGRAMS
-       src/H_Warehouse/H04_MultiWaypointWithoutMoveBaseUseList.py
+       src/H_Warehouse/H04_SequentialWaypointWithoutMoveBase.py
        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
    )
    ```
 
-   - Open a H04_MultiWaypointWithoutMoveBaseUseList.py file and write the code
+   - Open a H04_SequentialWaypointWithoutMoveBase.py file and write the code
    - `$ cd ~/catkin_ws`
    - `$ catkin_make`
    - `$ source devel/setup.bash`
    - `$ export TURTLEBOT3_MODEL=waffle`
-   - `$ rosrun turtlebot3_wilden H04_MultiWaypointWithoutMoveBaseUseList.py`
+   - `$ rosrun turtlebot3_wilden H04_SequentialWaypointWithoutMoveBase.py`
